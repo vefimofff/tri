@@ -1,5 +1,7 @@
 package com.wiley.api.json;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -36,6 +38,7 @@ import java.util.Map;
  "updated_on": 1393586511
  }
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class TestCaseJson {
     private Integer createdBy;
     private Integer createdOn;

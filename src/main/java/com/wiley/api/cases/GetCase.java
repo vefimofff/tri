@@ -19,7 +19,7 @@ public class GetCase implements Read<TestCaseJson> {
     }
 
     public TestCaseJson read() {
-        String url = this.tr.getUrl() + "index.php?/api/v2/get_case/:" + this.id;
+        String url = this.tr.getUrl() + "index.php?/api/v2/get_case/" + this.id;
         Response resp = new RaAuthorizedGet(url, this.tr.getLogin(), this.tr.getPassword()).send();
         return resp.as(TestCaseJson.class);
     }
